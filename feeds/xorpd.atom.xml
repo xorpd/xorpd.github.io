@@ -125,6 +125,14 @@ around the code. If that happens to you, you could use the &lt;/p&gt;
 
 
 &lt;p&gt;command to refresh the view.&lt;/p&gt;
+&lt;p&gt;Another way to view the current instruction (And a few more following
+instructions) is to use:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;x/10i &lt;span class="nv"&gt;$pc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This one will show the next 10 instructions from the current program counter.
+Pretty useful.&lt;/p&gt;
 &lt;h2&gt;Breakpoints:&lt;/h2&gt;
 &lt;p&gt;Setting a breakpoint:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;break&lt;/span&gt; *0x800000

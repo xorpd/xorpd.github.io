@@ -73,6 +73,14 @@ around the code. If that happens to you, you could use the </p>
 
 
 <p>command to refresh the view.</p>
+<p>Another way to view the current instruction (And a few more following
+instructions) is to use:</p>
+<div class="highlight"><pre>x/10i <span class="nv">$pc</span>
+</pre></div>
+
+
+<p>This one will show the next 10 instructions from the current program counter.
+Pretty useful.</p>
 <h2>Breakpoints:</h2>
 <p>Setting a breakpoint:</p>
 <div class="highlight"><pre><span class="nb">break</span> *0x800000

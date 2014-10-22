@@ -1,0 +1,44 @@
+body { 
+	/* font-family: monospace;  */
+	/* font-family:"Courier New", Courier, monospace; */
+	font-family:"Lucida Console", Monaco, monospace;
+	margin-left: auto; 
+	margin-right: auto; 
+	/* width: 40%;  */
+	/* font-family: Arial, Helvetica, sans-serif; */
+
+	line-height: 1.429;
+	/* background-color:black; */
+	/* background-image:url(pics/pcb.svg); */
+
+	background:url(pics/pcb_dark.svg) top right no-repeat; 
+	background-attachment:fixed;
+	/* background-size:100% 100%;  */
+	background-size:cover;
+
+	/*
+	background:url(pics/pcb_dark.svg) top right no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	*/
+
+	color:#e0e0e0;
+	/* color: #e8e1e9; */
+
+}
+
+a:link,a:visited {
+    text-decoration:none;
+    color:#00dd00;
+    /* color:green; */
+}
+
+a:hover {
+    color:red;
+}
+
+li {
+    margin:1em;
+}

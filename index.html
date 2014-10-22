@@ -1,187 +1,236 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>x86 Foundations</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
+    
+	
+<style type="text/css">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+#outer_tbl {
+    width:100%;
+    margin:0 auto;
+}
+
+#left_tbl,#right_tbl {
+    margin:0 auto;
+}
+
+#page_title {
+    margin:0 auto;
+    width:30em;
+    text-align:center;
+}
+
+#left_title,#right_title {
+    text-align:center;
+}
+
+#left_desc,#right_desc {
+    text-align:center;
+}
+
+</style>
+
+
+
+    <link rel="stylesheet" type="text/css" 
+	href="
+
+code_highlight.css"/>
+
+    <link rel="stylesheet" type="text/css"
+        href="
+page_style.css"/>
+
+<style type="text/css">
+
+#page_table {
+    width:100%;
+    padding-left:4em;
+}
+
+#header {
+    /* background-color:black;
+    color:white; */
+    text-align:left;
+    vertical-align:top;
+    padding:5px;
+    padding-left:3em;
+    padding-right:3em;
+    overflow:hidden;
+    /* height:4em; */
+    /* width:100%; */
+}
+
+#nav {
+    font-weight:bold;
+    line-height:30px;
+    /*
+    background-color:#101010; */
+    /* background-color:#f0f0f0; */
+    /* width:10em; */
+    width:10em;
+    padding:5px;
+    padding-right:3em;
+    padding-left:3em;
+    vertical-align:top;
+    float:left;
+}
+
+
+
+#header a:link,
+#header a:visited,
+#nav a:link ,
+#nav a:visited {
+    text-decoration:none;
+    color:white;
+}
+
+#header a:hover,
+#nav a:hover {
+    color:red;
+}
+
+#content {
+    padding:5px;
+    margin-left:auto;
+    margin-right:auto;
+    /* background-color:#efefef; */
+    /* background-color:#efefef; */
+    width:700px;
+    float:left;
+}
+#footer {
+    /*background-color:black;
+    color:white; */
+    text-align:center;
+    padding:5px;
+    clear:both;
+    color:#444444;
+}
+
+#text_container {
+    width:50em;
+}
+
+.bg_header, .bg_header_middle {
+    color:#555555;
+    font-size:200%
+}
+
+#title_header {
+    font-size:200%;
+    font-weight:bold;
+}
+
+.header_tables {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+</style> 
 </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="./">xorpd </a></h1>
-                <nav><ul>
-                    <li><a href="./pages/about.html">About</a></li>
-                    <li><a href="./pages/links.html">Links</a></li>
-                    <li class="active"><a href="./index.html">x86 Foundations</a></li>
-                    <li><a href="./category/blog.html">Blog</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-    <h1 class="entry-title">x86 Foundations</h1>
+<body>
+<div id="header">
     
-    <p>Always wanted to know how things really work? Maybe you always thought about
-yourself as a full stack developer, but you don't even know what is the stack?
-You want to research evil malware, but the virus developers outsmart you? You
-probably need to learn some Assembly.</p>
-<p>x86 Assembly language is the language you use to talk directly to your
-computer. In the past, learning it required reading long books with large lists
-and tables of commands. Not anymore - Learn assembly language today with the x86
-foundations video course by xorpd.</p>
-<p>The <strong>x86 Assembly Foundations</strong> course covers the basics of assembly language
-programming in a fun way, with modern tools, relevant examples and tough
-exercises. </p>
-<p>After taking this course, you are going to be able to write your own assembly
-programs that actually do useful things. You will also gain solid understanding
-about how low level things work in computers today.</p>
-<h2>Getting the Course:</h2>
-<ul>
-<li>
-<p><strong>For beginners:</strong> <a href="https://www.udemy.com/x86-asm-foundations/?couponCode=xorpd_website2">Buy the video
-    course (Udemy)</a>. The course
-    contains video lectures on different assembly subjects. Every lecture have a
-    few exercises that should be done, in order to consolidate what you have
-    learned. You get 50% discount if you buy it through this website.</p>
-</li>
-<li>
-<p><strong>For experienced programmers:</strong> Maybe you don't really need all the material
-    at the video course. Just <a href="https://github.com/xorpd/asm_prog_ex">download the exercises
-    (github)</a> for free, and start doing them
-    from the beginning to end. If you have any questions, feel free to send them to
-    me.</p>
-<p>For Linux users: Tyler Bohan of the New York University has ported
-almost all the exercises to Linux and Yasm. You can <a href="https://github.com/blankwall/asm_prog_ex">get them here
-(github)</a>.</p>
-</li>
-</ul>
-<h2>Example video lecture</h2>
-<p><div style="text-align:center;">
-<iframe width="640" height="360" src="http://www.youtube-nocookie.com/embed/guaA3Uc8_qU?rel=0" frameborder="0" allowfullscreen></iframe></p>
-<p>(Searching with the WinDBG debugger)
-</div></p>
-<p>For more example video lectures visit our <a href="https://www.youtube.com/channel/UCMQk7aHOcO68PadCkn-gxhA">YouTube channel</a>.</p>
-<h2>What people say about the course</h2>
-<ul>
-<li><div style="font-size:85%;">
-"If you want to learn x86 assembly this is the course for you. Xorpd presents great material from learning binary and hex, to analyzing assembly code through a debugger. Taking this course I had little knowledge of Assembly, now I am able to utilize the windows API to create windows programs . If you are skeptical about taking this course, it is worth it. The instructor is great at explaining concepts and he responds nearly immediately if you have a question.I had absolutely no problems with this course and I was writing x86 asm in no time. One thing I recommend if you end up taking this course is to do the work the instructor presents, it could really help you in the long run. Great course! I enjoyed it, and learned a lot!" </div> (Thomas)
-<br/><br/></li>
-</ul>
-<h2>Why learn Assembly language?</h2>
-<ul>
-<li>
-<p>To become a better programmer: Having a solid understanding of the low level
-  will make a better programmer out of you, no matter what programming language
-  you use.</p>
-</li>
-<li>
-<p>Malware research: If you ever want to understand how viruses really work, or
-  maybe even fight malware yourself, you have to obtain solid understanding of
-  the assembly language. </p>
-</li>
-<li>
-<p>For optimization: Learn to write fast code - Talk directly to the processor.</p>
-</li>
-<li>
-<p>For the history lesson: Get a full history lesson of the ways of the great
-  programmers of the past, and code like them. Learn about decisions of
-  engineers of old times, and how they affect us today, in the current x86
-  architecture.</p>
-</li>
-<li>
-<p>For the Curios: Maybe you always wanted to know how things really work. Here
-  you can exeperience yourself some assembly programming.</p>
-</li>
-</ul>
-<h2>Course contents:</h2>
-<ul>
-<li>
-<p>The Binary numeric system.</p>
-</li>
-<li>
-<p>Introduction to the x86 Architecture.</p>
-</li>
-<li>
-<p>Introduction to FASM.</p>
-</li>
-<li>
-<p>Assembly programming basics:</p>
-<ul>
-<li>
-<p>Branching</p>
-</li>
-<li>
-<p>Signed Operations</p>
-</li>
-<li>
-<p>Bitwise Operations</p>
-</li>
-<li>
-<p>Memory</p>
-</li>
-<li>
-<p>Strings</p>
-</li>
-<li>
-<p>Subroutines and the stack.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Becoming independent</p>
-<ul>
-<li>
-<p>Using the Manuals.</p>
-</li>
-<li>
-<p>Debugging</p>
-</li>
-<li>
-<p>Imports and API</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2>System Requirements:</h2>
-<ul>
-<li>
-<p>The course assumes that you have an <strong>x86 processor</strong> on your computer. (If you
-    are not sure, most likely that you have one).</p>
-</li>
-<li>
-<p>You will need a <strong>Windows</strong> operation system to do the course. (All the exercises
-    are running on windows, and were only tested on the windows operation system.
-    For any other operation system, you will be on your own with the exercises, at
-    least for now).</p>
-</li>
-<li>
-<p>The course uses the <a href="http://www.flatassembler.net">Flat Assembler (<strong>FASM</strong>)</a> by
-    Thomas Gryzstar.</p>
-</li>
-</ul>
-</section>
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<table class="header_tables">
+<tr>
+<td id="title_header">
+<a href="index.html">xorpd</a>
+</td>
+</tr>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+<tr><td class="bg_header" colspan="2">
+0011101100111001101100100011000110110110010000000110001011001010
+</td></tr>
+</table>
 
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-52347450-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+
+
+</div>
+<div id="nav">
+    
+    <nav>
+    <a href="
+pages/x86_adventures.html">x86 Adventures</a>
+    </br>
+    <a href="
+pages/xchg_rax/xchg.html">xchg rax,rax</a>
+    </br>
+    <a href="
+pages/links.html">Links</a></br>
+    <a href="
+blog_index.html">Blog</a></br></br>
+    <a href="
+pages/about.html">About</a></br>
+    </nav>
+
+
+</div>
+<div id="content">
+    
+	
+
+<div id="page_title">
+<h1>What if you knew <br/>
+how computers work?</h1>
+</div>
+
+</br>
+<table id="outer_tbl"><tr>
+<td>
+<table id="left_tbl">
+    <tr><td id="left_title"><h2>
+    [<a href="
+pages/x86_adventures.html">x86 Adventures</a>]</h2>
+    </td></tr>
+    <tr><td id="left_desc">
+    
+    Learn x86 Assembly from scratch
+    </td></tr>
+</table>
+</td>
+
+<td>
+<table id="right_tbl">
+    <tr><td id="right_title">
+    <h2>[<a href="
+pages/xchg_rax/xchg.html">xchg rax,rax</a>]</h2>
+    </td></tr>
+    <tr><td id="right_desc">
+    x86 Assembly for the advanced
+    </td></tr>
+</table>
+</td>
+</tr></table>
+    
+
+
+
+</div>
+<div id="footer">
+	xorpd(&)xorpd.net
+</div>
+
 </body>
 </html>
+
+
+

@@ -1,0 +1,265 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	
+
+
+    <link rel="stylesheet" type="text/css" 
+	href="
+
+../code_highlight.css"/>
+
+    <link rel="stylesheet" type="text/css"
+        href="
+../page_style.css"/>
+
+<style type="text/css">
+
+#page_table {
+    width:100%;
+    padding-left:4em;
+}
+
+#header {
+    /* background-color:black;
+    color:white; */
+    text-align:left;
+    vertical-align:top;
+    padding:5px;
+    padding-left:3em;
+    padding-right:3em;
+    overflow:hidden;
+    /* height:4em; */
+    /* width:100%; */
+}
+
+#nav {
+    font-weight:bold;
+    line-height:30px;
+    /*
+    background-color:#101010; */
+    /* background-color:#f0f0f0; */
+    /* width:10em; */
+    width:10em;
+    padding:5px;
+    padding-right:3em;
+    padding-left:3em;
+    vertical-align:top;
+    float:left;
+}
+
+
+
+#header a:link,
+#header a:visited,
+#nav a:link ,
+#nav a:visited {
+    text-decoration:none;
+    color:white;
+}
+
+#header a:hover,
+#nav a:hover {
+    color:red;
+}
+
+#content {
+    padding:5px;
+    margin-left:auto;
+    margin-right:auto;
+    /* background-color:#efefef; */
+    /* background-color:#efefef; */
+    width:700px;
+    float:left;
+}
+#footer {
+    /*background-color:black;
+    color:white; */
+    text-align:center;
+    padding:5px;
+    clear:both;
+    color:#444444;
+}
+
+#text_container {
+    width:50em;
+}
+
+.bg_header, .bg_header_middle {
+    color:#555555;
+    font-size:200%
+}
+
+#title_header {
+    font-size:200%;
+    font-weight:bold;
+}
+
+.header_tables {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+</style> 
+</head>
+
+<body>
+<div id="header">
+    
+
+<table class="header_tables">
+<tr>
+<td id="title_header">
+<a href="../index.html">xorpd</a>
+</td>
+</tr>
+
+<tr><td class="bg_header" colspan="2">
+1001011011001111111110000100111110100000111101001000100010010010
+</td></tr>
+</table>
+
+
+
+</div>
+<div id="nav">
+    
+    <nav>
+    <a href="
+../pages/x86_adventures.html">x86 Adventures</a>
+    </br>
+    <a href="
+../pages/xchg_rax/xchg.html">xchg rax,rax</a>
+    </br>
+    <a href="
+../pages/links.html">Links</a></br>
+    <a href="
+../blog_index.html">Blog</a></br></br>
+    <a href="
+../pages/about.html">About</a></br>
+    </nav>
+
+
+</div>
+<div id="content">
+    
+	
+
+	<h1>Blog</h1>
+	<h2>Compiling vim with python3 support</h2>
+	
+<p>First Get checkinstall. It will allow us to install vim in an ordered fashion.
+If we ever want to remove this vim version, we could do it easily. (As opposed
+to just doing "make install", and then you are on your own if you want to
+remove this program in the future).</p>
+<div class="codehilite"><pre>sudo apt-get install checkinstall
+</pre></div>
+
+
+<p>We also need mercurial, to be able to download vim's source:</p>
+<div class="codehilite"><pre>sudo apt-get install mercurial
+</pre></div>
+
+
+<p>Next we get some packages that might be needed for the compilation process:</p>
+<div class="codehilite"><pre>sudo apt-get install python-dev python3-dev ruby ruby-dev
+libx11-dev libxt-dev libgtk2.0-dev libncurses5 ncurses-dev
+</pre></div>
+
+
+<p>Now get the lateset version of vim:</p>
+<div class="codehilite"><pre>hg clone https://vim.googlecode.com/hg/ vim
+</pre></div>
+
+
+<p>Next we configure:
+(Note that here one should choose if he wants to have python3 support or
+python 2 support. Because of some limitations it is not possible to have
+both of them.)</p>
+<div class="codehilite"><pre>./configure <span class="se">\</span>
+--enable-perlinterp <span class="se">\</span>
+--enable-python3interp <span class="se">\</span>
+--enable-rubyinterp <span class="se">\</span>
+--enable-cscope <span class="se">\</span>
+--enable-gui<span class="o">=</span>auto <span class="se">\</span>
+--enable-gtk2-check <span class="se">\</span>
+--enable-gnome-check <span class="se">\</span>
+--with-features<span class="o">=</span>huge <span class="se">\</span>
+--enable-multibyte <span class="se">\</span>
+--with-x <span class="se">\</span>
+--with-compiledby<span class="o">=</span><span class="s2">&quot;xorpd&quot;</span> <span class="se">\</span>
+--with-python3-config-dir<span class="o">=</span>/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu <span class="se">\</span>
+--prefix<span class="o">=</span>/opt/vim74
+</pre></div>
+
+
+<p>Next we compile:</p>
+<div class="codehilite"><pre>make
+</pre></div>
+
+
+<p>Now it is a good time to test the result. Don't install it yet, because you
+might still want to fix some things.</p>
+<div class="codehilite"><pre>make <span class="nb">test</span>
+</pre></div>
+
+
+<p>Even if all the tests passed, make sure that you do have python3 support.
+Go to the src folder (./vim/src), and invoke the new vim binary from there.</p>
+<div class="codehilite"><pre>./vim
+</pre></div>
+
+
+<p>Then invoke inside vim:</p>
+<div class="codehilite"><pre><span class="p">:</span>echo has<span class="p">(</span><span class="s1">&#39;python3&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>If you get 1, it's all good.</p>
+<p>We install the package using:</p>
+<div class="codehilite"><pre>sudo checkinstall
+</pre></div>
+
+
+<p>Of some strange reason, I have to change the name of the package to 
+something which is not "vim". "vim74_compiled" will do, for example. (If I
+don't change it, I get an error message from checkinstall).</p>
+<p>Finally, we create a shortcut:</p>
+<div class="codehilite"><pre>sudo ln -s /opt/vim74/bin/vim /usr/bin/vim
+</pre></div>
+
+
+<p>Happy vimming!</p>
+<p>More tips regarding this subject could be found here on the following links:
+(Much of the information that could be found in this article relies on the
+information from those links)</p>
+<p><a href="http://vimdoc.sourceforge.net/htmldoc/usr_90.html">vim's documentation</a>
+<br/>
+<a href="http://kowalcj0.wordpress.com/2013/11/19/how-to-compile-and-install-latest-version-of-vim-with-support-for-x11-clipboard-ruby-python-2-3/">Hulk Angry Hulk Smash's blog</a></p>
+
+</div>
+<div id="footer">
+	xorpd(&)xorpd.net
+</div>
+
+</body>
+</html>
+
+
+

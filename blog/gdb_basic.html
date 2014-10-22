@@ -1,0 +1,263 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	
+
+
+    <link rel="stylesheet" type="text/css" 
+	href="
+
+../code_highlight.css"/>
+
+    <link rel="stylesheet" type="text/css"
+        href="
+../page_style.css"/>
+
+<style type="text/css">
+
+#page_table {
+    width:100%;
+    padding-left:4em;
+}
+
+#header {
+    /* background-color:black;
+    color:white; */
+    text-align:left;
+    vertical-align:top;
+    padding:5px;
+    padding-left:3em;
+    padding-right:3em;
+    overflow:hidden;
+    /* height:4em; */
+    /* width:100%; */
+}
+
+#nav {
+    font-weight:bold;
+    line-height:30px;
+    /*
+    background-color:#101010; */
+    /* background-color:#f0f0f0; */
+    /* width:10em; */
+    width:10em;
+    padding:5px;
+    padding-right:3em;
+    padding-left:3em;
+    vertical-align:top;
+    float:left;
+}
+
+
+
+#header a:link,
+#header a:visited,
+#nav a:link ,
+#nav a:visited {
+    text-decoration:none;
+    color:white;
+}
+
+#header a:hover,
+#nav a:hover {
+    color:red;
+}
+
+#content {
+    padding:5px;
+    margin-left:auto;
+    margin-right:auto;
+    /* background-color:#efefef; */
+    /* background-color:#efefef; */
+    width:700px;
+    float:left;
+}
+#footer {
+    /*background-color:black;
+    color:white; */
+    text-align:center;
+    padding:5px;
+    clear:both;
+    color:#444444;
+}
+
+#text_container {
+    width:50em;
+}
+
+.bg_header, .bg_header_middle {
+    color:#555555;
+    font-size:200%
+}
+
+#title_header {
+    font-size:200%;
+    font-weight:bold;
+}
+
+.header_tables {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+</style> 
+</head>
+
+<body>
+<div id="header">
+    
+
+<table class="header_tables">
+<tr>
+<td id="title_header">
+<a href="../index.html">xorpd</a>
+</td>
+</tr>
+
+<tr><td class="bg_header" colspan="2">
+1111010001100110110110010010010010001011100111010100111001011110
+</td></tr>
+</table>
+
+
+
+</div>
+<div id="nav">
+    
+    <nav>
+    <a href="
+../pages/x86_adventures.html">x86 Adventures</a>
+    </br>
+    <a href="
+../pages/xchg_rax/xchg.html">xchg rax,rax</a>
+    </br>
+    <a href="
+../pages/links.html">Links</a></br>
+    <a href="
+../blog_index.html">Blog</a></br></br>
+    <a href="
+../pages/about.html">About</a></br>
+    </nav>
+
+
+</div>
+<div id="content">
+    
+	
+
+	<h1>Blog</h1>
+	<h2>Very basic GDB commands</h2>
+	
+<p>GDB is a very powerful debugger that comes with most linux distrubutions. You
+will want to study it for a while if you are going to write assembly code on
+the linux platform.</p>
+<p>It takes some time to study the first GDB commands, however don't be
+intimidated by the black console. Invest the time to study the basic commands.
+It really worth it.</p>
+<p>If you are just starting out with gdb, the following basic commands might be
+useful for you.</p>
+<p>Getting information about the entry point (And some more): 
+This is very useful if you want to put a breakpoint in the beginning of the
+program:</p>
+<div class="codehilite"><pre>info files
+</pre></div>
+
+
+<p>Viewing the registers:</p>
+<div class="codehilite"><pre>info registers
+</pre></div>
+
+
+<p>Or for specific register:</p>
+<div class="codehilite"><pre>info registers regname
+</pre></div>
+
+
+<p>If you want to view the disassembly of the current location, you may use the
+following command to get a cool assembly window:</p>
+<div class="codehilite"><pre>layout asm
+</pre></div>
+
+
+<p>It happens to me sometimes that the view is messed up after some stepping
+around the code. If that happens to you, you could use the </p>
+<div class="codehilite"><pre>refresh
+</pre></div>
+
+
+<p>command to refresh the view.</p>
+<p>Another way to view the current instruction (And a few more following
+instructions) is to use:</p>
+<div class="codehilite"><pre>x/10i <span class="nv">$pc</span>
+</pre></div>
+
+
+<p>This one will show the next 10 instructions from the current program counter.
+Pretty useful.</p>
+<p>Setting a breakpoint:</p>
+<div class="codehilite"><pre><span class="nb">break</span> *0x800000
+</pre></div>
+
+
+<p>View list of breakpoints:</p>
+<div class="codehilite"><pre>info breakpoints
+</pre></div>
+
+
+<p>Deleting a breakpoint:</p>
+<div class="codehilite"><pre>delete <span class="o">(</span>breakpoint_number<span class="o">)</span>
+</pre></div>
+
+
+<p>or the shortcut:</p>
+<div class="codehilite"><pre>d <span class="o">(</span>breakpoint number<span class="o">)</span>
+</pre></div>
+
+
+<p>Running:</p>
+<div class="codehilite"><pre>run
+</pre></div>
+
+
+<p>Continuing the program:</p>
+<div class="codehilite"><pre><span class="k">continue</span>
+</pre></div>
+
+
+<p>Stepping into: (This one will get into functions)</p>
+<div class="codehilite"><pre>stepi
+si
+</pre></div>
+
+
+<p>Stepping over: (This one will skip functions)</p>
+<div class="codehilite"><pre>nexti
+ni
+</pre></div>
+
+</div>
+<div id="footer">
+	xorpd(&)xorpd.net
+</div>
+
+</body>
+</html>
+
+
+

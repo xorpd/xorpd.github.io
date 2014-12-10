@@ -3,12 +3,40 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0,
 maximum-scale=1.0">
+
+<script>
+    // Music player Start and Stop:
+    // Play and Stop unicode characters:
+    var PLAY_STR = "int"
+    var STOP_STR = "hlt"
+
+	function change_music_state() {
+        // Toggle the state of the player.
+        // We keep state using the character text inside the Anchor.
+        current_state_char = document.getElementById("player_cont").innerHTML;
+        if (current_state_char == PLAY_STR) {
+            document.getElementById('player').play()
+            document.getElementById("player_cont").innerHTML = STOP_STR
+        } else {
+            document.getElementById('player').pause()
+            document.getElementById("player_cont").innerHTML = PLAY_STR
+        }
+        return true;
+	}
+
+</script>
+
 <style>
 
 html,body {
     font-family: "Courier New", Courier, monospace;
     height: 95%;
     background: #050505;
+}
+
+#player_cont {
+    font-family: "Courier New", Courier, monospace;
+    text-decoration: none;
 }
 
 #snip_content_cell {
@@ -42,23 +70,33 @@ html,body {
     vertical-align:top;
 }
 
-#return_cell,#share_cell {
+#play_cont_cell, #return_cell,#share_cell {
     text-align: center;
     vertical-align:top;
     width: 33%;
     white-space: nowrap;
 }
 
-.xchg_rax {
+#xchg_rax {
+    text-align: center;
+    vertical-align:top;
+    white-space: nowrap;
+    color:#eeeeee;
+}
+
+#play_cont_cell {
     text-align: center;
     white-space: nowrap;
-    vertical-align:top;
     color:#eeeeee;
 }
 
 
 #lower_table {
     height: 97%;
+}
+
+#lower_links_table {
+    width: 97%;
 }
 
 #upper_table {
@@ -157,7 +195,7 @@ href="https://www.createspace.com/5067642" target="_blank">hard copy</a> on Amaz
         <a class ="menu_link" href="snip_00.html">dec</a>
 
         </td>
-        <td class="xchg_rax">
+        <td id="xchg_rax">
 		[xchg rax,rax]
         </td>
         <td id="next_cell">
@@ -181,7 +219,7 @@ href="https://www.createspace.com/5067642" target="_blank">hard copy</a> on Amaz
     </tr>
     <tr>
         <td colspan="3" id="lower_menu_cell">
-        <table><tr>
+        <table id="lower_links_table"><tr>
             <td id="share_cell">
                 
 
@@ -195,8 +233,9 @@ href="https://www.createspace.com/5067642" target="_blank">hard copy</a> on Amaz
 
             </td>
             </td>
-            <td class="xchg_rax">
-                [xchg rax,rax]
+            <td id="play_cont_cell">
+            <a class = "menu_link" title="BRD - Teleport Prokg" id="player_cont" href="#"
+                onclick="change_music_state();">int</a>
             </td>
             <td id="return_cell">
                 <a class="menu_link" href="http://www.xorpd.net">xorpd</a>
@@ -208,6 +247,7 @@ href="https://www.createspace.com/5067642" target="_blank">hard copy</a> on Amaz
       <td colspan="3" id="contact_cell">; xorpd(&)xorpd.net</td>
     </tr>
 </table>
+<audio id="player" src="BRD_Teleport_Prokg.mp3"></audio>
 
 
 </body>

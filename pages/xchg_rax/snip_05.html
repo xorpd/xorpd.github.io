@@ -22,8 +22,13 @@ html,body {
 
 
 .snip_link {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #ffffff;
+    font-size:1.0em;
+}
+
+.buy_link {
+    color:#ffffff;
     font-size:1.0em;
 }
 
@@ -37,16 +42,20 @@ html,body {
     vertical-align:top;
 }
 
-#buy_cell,#return_cell,#share_cell {
+#return_cell,#share_cell {
     text-align: center;
     vertical-align:top;
     width: 33%;
     white-space: nowrap;
 }
 
-#buy_cell {
-    font-weight:bold;
+.xchg_rax {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align:top;
+    color:#eeeeee;
 }
+
 
 #lower_table {
     height: 97%;
@@ -66,6 +75,13 @@ html,body {
 
 }
 
+#buy_comment {
+    color:#eeeeee;
+    text-align:center;
+    background-color:#222222;
+    padding:0.8em;
+}
+
 a:hover {
     color: #10ff10;
 }
@@ -83,7 +99,7 @@ pre {
 /* .link_next_prev,.return_link { */
     color: #8f8f8f;
     font-size:1.0em;
-    text-decoration:none;
+    /* text-decoration:none; */
 }
 
 .link_disabled {
@@ -127,7 +143,9 @@ pre {
 
 
 
-<table id="upper_table"></table>
+<div id="buy_comment">; Get Paperback on  <a class="buy_link"
+href="https://www.createspace.com/5067642" target="_blank">Amazon CreateSpace</a>. Use the code
+469B5429 for 35% discount.</div><br />
 <table id="lower_table">
     <tr>
         <td id="snip_index_cell" colspan="3">
@@ -140,8 +158,8 @@ pre {
         <a class ="menu_link" href="snip_04.html">dec</a>
 
         </td>
-        <td id="buy_cell">
-            <a class="menu_link" href="https://www.createspace.com/5067642" target="_blank">[xchg rax,rax]</a>
+        <td class="xchg_rax">
+		[xchg rax,rax]
         </td>
         <td id="next_cell">
             
@@ -154,9 +172,9 @@ pre {
 
       <td colspan="3" id="snip_content_cell">
       <table><tr><td>
-      <pre><a href="https://www.createspace.com/5067642" class="snip_link" target="_blank">sub      rax,5
+      <pre>sub      rax,5
 cmp      rax,4
-</a></pre>
+</pre>
       </td></tr></table>
       </td>
 
@@ -177,8 +195,8 @@ cmp      rax,4
 
             </td>
             </td>
-            <td id="buy_cell">
-                <a class="menu_link" href="https://www.createspace.com/5067642" target="_blank">[xchg rax,rax]</a>
+            <td class="xchg_rax">
+                [xchg rax,rax]
             </td>
             <td id="return_cell">
                 <a class="menu_link" href="http://www.xorpd.net">xorpd</a>

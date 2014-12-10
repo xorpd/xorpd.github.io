@@ -21,7 +21,6 @@ maximum-scale=1.0">
             document.getElementById('player').pause()
             document.getElementById("player_cont").innerHTML = PLAY_STR
         }
-        return true;
 	}
 
 </script>
@@ -238,8 +237,8 @@ and      rax,rdx
             </td>
             </td>
             <td id="play_cont_cell">
-            <a class = "menu_link" title="BRD - Teleport Prokg" id="player_cont" href="#"
-                onclick="change_music_state();">int</a>
+            <a class = "menu_link" title="BRD - Teleport Prokg" id="player_cont" href=""
+                onclick="change_music_state(); return false;">int</a>
             </td>
             <td id="return_cell">
                 <a class="menu_link" href="http://www.xorpd.net">xorpd</a>

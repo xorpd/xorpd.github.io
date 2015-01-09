@@ -11,7 +11,7 @@ body {
 	/* background-color:black; */
 	/* background-image:url(pics/pcb.svg); */
 
-	background:url(pics/pcb_dark.svg) top right no-repeat; 
+	background:url(pics/pcb_light.svg) top right no-repeat; 
 	background-attachment:fixed;
 	/* background-size:100% 100%;  */
 	background-size:cover;
@@ -24,15 +24,19 @@ body {
 	background-size: cover;
 	*/
 
-	color:#e0e0e0;
+	/* color:#e0e0e0; */
 	/* color: #e8e1e9; */
+	color:#050505;
 
 }
 
 a:link,a:visited {
-    text-decoration:none;
-    color:#00dd00;
+    /* text-decoration:none; */
     /* color:green; */
+    /* color:#00dd00; */
+    
+    /* color:#006400;  *//* Dark green */
+    color:blue;
 }
 
 a:hover {
@@ -41,4 +45,32 @@ a:hover {
 
 li {
     margin:1em;
+}
+
+#nav {
+    font-weight:bold;
+    line-height:30px;
+    /*
+    background-color:#101010; */
+    /* background-color:#f0f0f0; */
+    /* width:10em; */
+    width:10em;
+    padding:5px;
+    padding-right:3em;
+    padding-left:3em;
+    vertical-align:top;
+    float:left;
+}
+
+#header a:link,
+#header a:visited,
+#nav a:link ,
+#nav a:visited {
+    /* text-decoration:none; */
+    color:black;
+}
+
+#header a:hover,
+#nav a:hover {
+    color:red;
 }

@@ -33,8 +33,29 @@
 
 #buy_course {
     font-size:150%;
+    text-align:center;
 }
 
+/*
+Thanks to: 
+http://tutorials.jenkov.com/css/links.html
+*/
+
+a.buy_button:link,a.buy_button:visited {
+    border: 2px solid #006600;
+    border-radius: 5px;
+    background-color: #009900;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    margin : 20px;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+}
+a.buy_button:hover {
+    border: 2px solid #009900;
+    background-color: #00cc00;
+}
 
 </style>
 
@@ -149,7 +170,7 @@
 </tr>
 
 <tr><td class="bg_header" colspan="2">
-1001111101011001100110101101110001110010011011110011010111010110
+0101010000110010100011110110000111000011110100111011101001101000
 </td></tr>
 </table>
 
@@ -257,14 +278,13 @@ exercises.</p>
 <iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/orJMBj2qJ4k?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <br/><br/>
-<span id="buy_course">
-[<a href="https://www.udemy.com/x86-asm-foundations/?couponCode=xorpd_website_19" onclick="trackConv(974022254,'ILAUCLbO4lgQ7sy50AM');">Buy Assembly Language Adventures for
-<strong>19$</strong></a>]</span><br/>
+<div id="buy_course">
+<a href="https://www.udemy.com/x86-asm-foundations/?couponCode=xorpd_website_19" class="buy_button" onclick="trackConv(974022254,'ILAUCLbO4lgQ7sy50AM');">Buy Assembly Language Adventures for
+<strong>$19</strong></a></div><br/>
 <ul>
 <li>29+ hours of tough assembly programming videos. </li>
 <li>Exercises for every lecture (Open sourced).</li>
-<li>Mail support from the author: Didn't understand something? Drop me a mail
-at xorpd(&)xorpd.net</li>
+<li>Mail support from the author at xorpd(&)xorpd.net</li>
 <li>2 months money back guarantee: Didn't like it? You get your money back. No
   questions asked.</li>
 <li>Just want to try it? View here the first few hours for free.</li>
@@ -274,19 +294,6 @@ Course chapters
 </h2>
 
 <table id="courses_table">
-    <tr>
-        <td>
-        </td>
-        <td>
-            Chapter
-        </td>
-        <td>
-            Price
-        </td>
-        <td>
-            Obtain
-        </td>
-    </tr>
         
         <tr>
         <td>
@@ -296,15 +303,6 @@ Course chapters
             <a class="part_inner_link" href="x86_adv/p1_counting.html">
             Counting with two digits</a>
         </td>
-        <td>
-Free</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-1/">Udemy</a>]
-        [<a class="course_links" href="http://www.youtube.com/playlist?list=PLn4AdTx18u3s2ZUo4DetnL5QzjujJSgxN">Youtube</a>]
-</td>
     </tr>
         
         <tr>
@@ -315,14 +313,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p2_x86_blind_date.html">
             x86 Blind Date</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-2/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -333,14 +323,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p3_the_flat_assembler.html">
             The Flat Assembler</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-3/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -351,14 +333,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p4_branching.html">
             Branching</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-4/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -369,14 +343,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p5_bits_with_personality.html">
             Bits with Personality</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-5/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -387,14 +353,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p6_stories_of_memory.html">
             Stories of Memory</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-6/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -405,14 +363,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p7_x86_stringing.html">
             x86 Stringing</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-7/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -423,14 +373,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p8_stack_games.html">
             Stack Games</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-8/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -441,15 +383,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/p9_reading_the_manuals.html">
             Reading the Manuals</a>
         </td>
-        <td>
-Free</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-9/">Udemy</a>]
-        [<a class="course_links" href="http://www.youtube.com/playlist?list=PLn4AdTx18u3u6MFnxSjqkBLHY7Pjabfcu">Youtube</a>]
-</td>
     </tr>
         
         <tr>
@@ -460,14 +393,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/pa_dancing_with_windbg.html">
             Dancing with WinDbg</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-a/?couponCode=xorpd_website5">Udemy</a>]
-</td>
     </tr>
         
         <tr>
@@ -478,21 +403,6 @@ Free</td>
             <a class="part_inner_link" href="x86_adv/pb_small_talk_with_win.html">
             Small Talk with Windows</a>
         </td>
-        <td>
-3$</td>
-        <td>
-
-    
-    
-        [<a class="course_links" href="https://www.udemy.com/x86-adventures-part-b/?couponCode=xorpd_website5">Udemy</a>]
-</td>
-    </tr>
-    <tr>
-    <td></td>
-    <td><strong>Complete Course</strong></td>
-    <td><strong>19$</strong></td>
-    <td>[<a href="https://www.udemy.com/x86-asm-foundations/?couponCode=xorpd_website_19" onclick="trackConv(974022254,'ILAUCLbO4lgQ7sy50AM');">Udemy</a>]
-    </td>
     </tr>
 </table>
 

@@ -16,6 +16,9 @@ cyan      #2aa198  strings, numbers
 green     #859900  operators, other keywords
 */
 
+div.codehilite {
+	padding:15px;
+}
 .codehilite { background-color: #002b36; color: #93a1a1 }
 .codehilite .c { color: #586e75 } /* Comment */
 .codehilite .err { color: #93a1a1 } /* Error */

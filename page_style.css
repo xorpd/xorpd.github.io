@@ -74,3 +74,12 @@ li {
 #nav a:hover {
     color:red;
 }
+
+#nav a.nav_special:link,
+#nav a.nav_special:visited {
+    color:blue;
+}
+
+#nav a.nav_special:hover {
+    color:red;
+}
